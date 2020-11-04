@@ -8,6 +8,7 @@ const answers = [
 const correct = 'クラウド';
 
 const $button = document.getElementsByTagName('button')
+const buttonLength = $button.length;
 
 const setupQuiz = () => {
     console.log(document.getElementById('js-questin').textContent = question);
@@ -36,19 +37,10 @@ const clickHandler = (e) =>{
     }
 };
 
-
-$button[0].addEventListener('click', (e) => {
-    clickHandler(e);
-});
-
-$button[1].addEventListener('click', (e) => {
-    clickHandler(e);
-});
-
-$button[2].addEventListener('click', (e) => {
-    clickHandler(e);
-});
-
-$button[3].addEventListener('click', (e) => {
-    clickHandler(e);
-});
+let handlerIndex = 0;
+while (handlerIndex < buttonLength) {
+    $button[handlerIndex].addEventListener('click', (e) => {
+        clickHandler(e);
+    });
+    handlerIndex++;
+}

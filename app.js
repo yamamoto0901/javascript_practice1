@@ -7,43 +7,56 @@ const answers = [
 ];
 const correct = 'クラウド';
 
-console.log(document.getElementById('js-questin').textContent = question);
-
 const $button = document.getElementsByTagName('button')
 
-$button[0].textContent = answers[0];
-$button[1].textContent = answers[1];
-$button[2].textContent = answers[2];
-$button[3].textContent = answers[3];
+const setupQuiz = () => {
+    console.log(document.getElementById('js-questin').textContent = question);
+    
+    // $button[0].textContent = answers[0];
+    // $button[1].textContent = answers[1];
+    // $button[2].textContent = answers[2];
+    // $button[3].textContent = answers[3];
+    
+    let buttonIndex = 0;
+    let buttonLength = $button.length;
+    while(buttonIndex < buttonLength){
+        $button[buttonIndex].textContent = answers[buttonIndex];
+        buttonIndex++;
+    }
+};
+
+setupQuiz();
 
 
-
-$button[0].addEventListener('click', () => {
-    if(correct === document.getElementsByTagName('button')[0].textContent){
+$button[0].addEventListener('click', (e) => {
+    if(correct === e.target.textContent){
         window.alert('正解');
     }
     else{
     window.alert('不正解');
     }
 });
-$button[1].addEventListener('click', () => {
-    if(correct === document.getElementsByTagName('button')[1].textContent){
+
+$button[1].addEventListener('click', (e) => {
+    if(correct === e.target.textContent){
         window.alert('正解');
     }
     else{
     window.alert('不正解');
     }
 });
-$button[2].addEventListener('click', () => {
-    if(correct === document.getElementsByTagName('button')[2].textContent){
+
+$button[2].addEventListener('click', (e) => {
+    if(correct === e.target.textContent){
         window.alert('正解');
     }
     else{
     window.alert('不正解');
     }
 });
-$button[3].addEventListener('click', () => {
-    if(correct === document.getElementsByTagName('button')[3].textContent){
+
+$button[3].addEventListener('click', (e) => {
+    if(correct === e.target.textContent){
         window.alert('正解');
     }
     else{

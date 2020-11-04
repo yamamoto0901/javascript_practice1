@@ -18,7 +18,7 @@ a{
     color: #333333;
 }
 
-.button{
+.answers{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +36,6 @@ a{
     justify-content:center;
 }
 
-    .button:hover{
+    .answers:hover{
         opacity: 0.7;
     }
-  

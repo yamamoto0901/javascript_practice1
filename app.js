@@ -1,3 +1,42 @@
+const quiz = [
+    {
+        questin:'ファイナルファンタジー７の主人公は誰？',
+        answers:[ 'ティーダ',
+        'スコール',
+        'クラウド',
+        'ヴァン'
+        ],
+        correct:'クラウド'
+    },{
+        questin:'ファイナルファンタジー７の主人公は誰？',
+        answers:[ 'ティーダ',
+        'スコール',
+        'クラウド',
+        'ヴァン'
+        ],
+        correct:'クラウド'
+    },{
+        questin:'ファイナルファンタジー７の主人公は誰？',
+        answers:[ 'ティーダ',
+        'スコール',
+        'クラウド',
+        'ヴァン'
+        ],
+        correct:'クラウド'
+    },{
+        questin:'ファイナルファンタジー７の主人公は誰？',
+        answers:[ 'ティーダ',
+        'スコール',
+        'クラウド',
+        'ヴァン'
+        ],
+        correct:'クラウド'
+    },
+];
+
+const quizLength = quize.length;
+let quizIndex = 0;
+
 const question ='ファイナルファンタジー７の主人公は誰？';
 const answers = [
     'ティーダ',

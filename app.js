@@ -8,59 +8,46 @@ const quiz = [
         ],
         correct:'クラウド'
     },{
-        questin:'ファイナルファンタジー７の主人公は誰？',
-        answers:[ 'ティーダ',
-        'スコール',
-        'クラウド',
-        'ヴァン'
+        questin:'通称「デジモン」の正式名称はどれ？',
+        answers:[ 'デジータトモンスター',
+        'デジタルモンスト',
+        'デジタルモンスター',
+        'デンジモン'
         ],
-        correct:'クラウド'
+        correct:'デジタルモンスター'
     },{
-        questin:'ファイナルファンタジー７の主人公は誰？',
-        answers:[ 'ティーダ',
-        'スコール',
-        'クラウド',
-        'ヴァン'
+        questin:'XJAPANのドラマーは誰？',
+        answers:[ 'Hide',
+        'Toshi',
+        'YOSHIKI',
+        'Pata'
         ],
-        correct:'クラウド'
+        correct:'YOSHIKI'
     },{
-        questin:'ファイナルファンタジー７の主人公は誰？',
-        answers:[ 'ティーダ',
-        'スコール',
-        'クラウド',
-        'ヴァン'
+        questin:'日本で一番人気のSNSは？',
+        answers:[ 'Twitter',
+        'TikTok',
+        'Instagram',
+        'LINE'
         ],
-        correct:'クラウド'
+        correct:'LINE'
     },
 ];
 
-const quizLength = quize.length;
+const quizLength = quiz.length;
 let quizIndex = 0;
-
-const question ='ファイナルファンタジー７の主人公は誰？';
-const answers = [
-    'ティーダ',
-    'スコール',
-    'クラウド',
-    'ヴァン'
-];
-const correct = 'クラウド';
 
 const $button = document.getElementsByTagName('button')
 const buttonLength = $button.length;
 
 const setupQuiz = () => {
-    console.log(document.getElementById('js-questin').textContent = question);
+    document.getElementById('js-questin').textContent = quiz[quizIndex].question;
     
-    // $button[0].textContent = answers[0];
-    // $button[1].textContent = answers[1];
-    // $button[2].textContent = answers[2];
-    // $button[3].textContent = answers[3];
-    
+
     let buttonIndex = 0;
     let buttonLength = $button.length;
     while(buttonIndex < buttonLength){
-        $button[buttonIndex].textContent = answers[buttonIndex];
+        $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
         buttonIndex++;
     }
 };
@@ -69,11 +56,20 @@ setupQuiz();
 
 const clickHandler = (e) =>{
     if(correct === e.target.textContent){
-        window.alert('正解');
+    window.alert('正解');
     }
     else{
     window.alert('不正解');
     }
+
+    quizIndex++;
+
+    if(quizIndex < quizLength){
+
+    } else {
+        window.aleat('終了')
+    }
+
 };
 
 let handlerIndex = 0;
